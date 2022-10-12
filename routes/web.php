@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Login;
+use App\Http\Controllers\Productstock;
 use App\Http\Controllers\Register;
 use App\Http\Controllers\User;
+use App\Http\Controllers\UserApi;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,5 +45,17 @@ Route::get('/dashboard', [Dashboard::class, 'index'])->middleware('auth');
 
 // Route untuk mengarah ke controller User dan method nya index
 Route::get('/user', [User::class, 'index'])->middleware('auth');
-// Route untuk mengarah ke controller User dan method nya index
+// Route untuk mengarah ke controller User dan method nya create
 Route::get('/createUser', [User::class, 'create'])->middleware('auth');
+// Route untuk mengarah ke controller User dan method nya userSimpan
+Route::post('/userSimpan', [User::class, 'userSimpan'])->middleware('auth');
+
+
+Route::resource('user', User::class)->middleware('auth');
+
+
+// Route untuk mengarah ke controller Productstock dan method nya index
+Route::get('/product-stock', [Productstock::class, 'index'])->middleware('auth');
+
+// Route untuk mengarah ke controller UserApi dan method nya index
+Route::get('/user-api', [UserApi::class, 'index'])->middleware('auth');

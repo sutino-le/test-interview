@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Okt 2022 pada 12.51
+-- Waktu pembuatan: 12 Okt 2022 pada 09.07
 -- Versi server: 10.4.25-MariaDB
 -- Versi PHP: 8.1.10
 
@@ -110,8 +110,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `created_at`, `updated_at`) VALUES
-(1, 'Superadmin', 'superadmin@admin.com', '$2y$10$d01K8fPiR0Il28QlYNZFFuS7ALj0OhBqg8ceQHUBD69xNC1FZgLia', '2022-10-10 20:44:54', '2022-10-10 20:44:54'),
-(7, 'sutino', 'sutino.skom@gmail.com', '$2y$10$G4Q8YiSWXRs6bqcAqIm3n.eN9Is6oRmxfLs9ICVFRCE0g9WhgWGCK', '2022-10-11 00:47:47', '2022-10-11 00:47:47');
+(9, 'Superadmin', 'superadmin@admin.com', '$2y$10$.46zpvdljm2gVcy93lcv6Oc5nUePdmDsN8C1erSLjLUePCeCSQeZK', '2022-10-11 20:21:33', '2022-10-11 20:21:33'),
+(10, 'sutino', 'sutino.skom@gmail.com', '$2y$10$0V57sLzzuUcxwe3XuMjU2edLIbL0f87oPSUfXKebVoFpPbUTcRuyu', '2022-10-11 20:22:19', '2022-10-11 21:57:35');
 
 --
 -- Indexes for dumped tables
@@ -177,7 +177,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

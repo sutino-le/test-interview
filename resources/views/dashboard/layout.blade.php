@@ -19,8 +19,18 @@
   <link rel="stylesheet" href="/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="/assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 
+  <style>
+    body {
+        user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+    }
+  </style>
 
 
 </head>
@@ -54,7 +64,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="/assets/index3.html" class="brand-link">
+    <a href="/dashboard" class="brand-link">
       <img src="/assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">AdminLTE 3</span>
     </a>
@@ -83,6 +93,22 @@
               <i class="nav-icon fas fa-user"></i>
               <p>
                 User
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/product-stock" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                Product Stock
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/user-api" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                API User
               </p>
             </a>
           </li>
@@ -118,6 +144,15 @@
       @if(session()->has('sukses'))
       <div class="alert alert-success alert-dismissible fade show" role="alert">
         {{ session('sukses') }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      @endif
+
+      @if(session()->has('gagal'))
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{ session('gagal') }}
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
